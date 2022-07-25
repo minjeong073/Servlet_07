@@ -47,13 +47,12 @@
 	<!-- 3. 1부터 n까지 합계를 구하는 함수 -->
 
 	<%!
-		private int nSum = 0;
-
 		public int NSum(int N) {
+			int sum = 0;
 			for (int i = 1; i <= N; i++) {
-				nSum += i;
+				sum += i;
 			}
-			return nSum;
+			return sum;
 		}
 	%>
 
@@ -66,7 +65,7 @@
 		int age = 2022 - year + 1;
 	%>
 
-	<h3><%= birthDay %> 의 나이는 <%= age%> 살 입니다. </h3>
+	<h3><%= birthDay %> 의 나이는 <%= age %> 살 입니다. </h3>
 
 </body>
 </html>
