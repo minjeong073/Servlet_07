@@ -18,7 +18,7 @@
 <div class="container form-group">
     <h2>사칙 연산</h2>
     <form method="post" action="/jsp/test04.jsp" class="d-flex">
-        <input class="form-control" name="number1">
+        <input type="text" class="form-control" name="number1">
         <select name="operator" class="form-control">
             <option value="+">+</option>
             <option value="-">-</option>
