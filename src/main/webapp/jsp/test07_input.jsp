@@ -20,7 +20,7 @@
 		<form method="post" action="/jsp/test07.jsp">
 			<div class="d-flex">
 				<input type="text" class="form-control col-4 mr-3" name="menu">
-				<input type="checkbox" value="underPoint"> 4점 이하 제외
+				<input type="checkbox" name="pointCheck"> 4점 이하 제외
 			</div>
 			<br>
 			<button type="submit" class="btn btn-success">검색</button>

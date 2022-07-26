@@ -38,13 +38,12 @@
 
 <%
 	String inputMenu = request.getParameter("menu");
-	String pointCheck = request.getParameter("underpoint");
+	String pointCheck = request.getParameter("pointCheck");
 	
 	if (pointCheck == null) {
 		pointCheck = "";
 	}
 %>
-
 
 	<div class="container text-center">
 		<div>
@@ -57,31 +56,39 @@
 				<th>상호</th>
 				<th>별점</th>
 			</tr>
-			
-				
+
 <%
-	if (!pointCheck.isEmpty()) {
-		for(Map<String, Object> store : list) {
-
-
-%>	
+	for(Map<String, Object> store : list) {
+		if (store.get("menu").equals(inputMenu)) {
+			// 4.0 이하 제외 체크된 경우
+			if (pointCheck.equals("on")) {
+				if ((double) store.get("point") > 4.0) {
+%>
 			<tr>
 				<td><%= store.get("menu") %></td>
 				<td><%= store.get("name") %></td>
 				<td><%= store.get("point") %></td>
 			</tr>
-			
+
 <%
+				}
+			}
+
+			else if (pointCheck.isEmpty()) {
+%>
+			<tr>
+				<td><%= store.get("menu") %></td>
+				<td><%= store.get("name") %></td>
+				<td><%= store.get("point") %></td>
+			</tr>
+<%
+			}
 		}
 	}
 %>			
 		</table>
-		
 
-
-	
 	</div>
-
 
 
 </body>
