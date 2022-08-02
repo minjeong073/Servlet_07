@@ -42,14 +42,14 @@
 				<tr>
 					<td><%= resultSet.getString("name") %></td>
 					<td><a href="<%= resultSet.getString("url") %>"><%= resultSet.getString("url") %></a></td>
-					<td><a href="/db/test02/delete?id=<%= resultSet.getInt("id")%>">삭제</a></td>
+					<td><a href="/db/test02/delete?id=<%= resultSet.getInt("id")%>" class="btn btn-sm btn-danger">삭제</a></td>
 				</tr>
 				<% } %>
 			</tbody>
 			
 		</table>
 		
-		<a href="/db/test02_input.jsp">추가하기</a>
+		<a href="/db/test02_input.jsp" class="btn btn-sm btn-success">추가하기</a>
 	</div>
 
 </body>

@@ -19,10 +19,10 @@
 		<h2>즐겨찾기 추가</h2>
 		<form method="post" action="/db/test02/insert" class="form-group">
 			<label>사이트명</label>
-			<input type="text" name="name" class="form-control"> <br>
+			<input type="text" name="name" class="form-control col-5"> <br>
 			<label>사이트 주소</label>
-			<input type="text" name="url" class="form-control"> <br>
-			<button type="submit" class="btn btn-success">추가</button>
+			<input type="text" name="url" class="form-control col-7"> <br>
+			<button type="submit" class="btn btn-sm btn-success">추가</button>
 			
 		</form>
 	</div>
